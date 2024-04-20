@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grid Practice</title>
+
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: 100px 100px;
+        margin-bottom: 10px;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 100px 1fr 2fr;
+        margin-bottom: 10px;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 10px;
+        column-gap: 20px;
+        row-gap: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div style="background-color: lightblue">Div 1</div>
+      <div style="background-color: lightpink">Div 2</div>
+    </div>
+
+    <div class="grid-2">
+      <div style="background-color: lightgreen">100px</div>
+      <div style="background-color: lightgrey">1fr</div>
+
+      <div style="background-color: lightskyblue">2fr</div>
+    </div>
+
+    <div class="grid-3">
+      <div style="background-color: lightgreen; height: 200px">1fr</div>
+      <div style="background-color: lightgrey; height: 200px">1fr</div>
+
+      <div style="background-color: lightskyblue; height: 200px">1fr</div>
+
+      <div style="background-color: lightgreen; height: 200px">1fr</div>
+      <div style="background-color: lightgrey; height: 200px">1fr</div>
+
+      <div style="background-color: lightskyblue; height: 200px">1fr</div>
+    </div>
+
+    <!--so fr means free space. 1fr tells the grid to take up freespace.-->
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>POSITION</title>
+    <style>
+      body {
+        height: 3000px;
+        padding-top: 60px; /* So that the content on the page has space at the top of the website from the headeer*/
+        padding-left: 80px; /* space between content and sidebar*/
+      }
+      .header {
+        background-color: black;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        /* all these directions tell the container how to stretch*/
+        z-index: 100; /* This indicates that the header should come before the 'absolute" design.it can be set to 2 
+        but it set to 100 incase the page has so m,any layers and the header neeeds to come first, it just indicates importance*/
+      }
+
+      .absolute {
+        background-color: red;
+        color: white;
+        position: absolute;
+        right: 10px;
+        top: 40px;
+      }
+
+      .sidebar {
+        background-color: green;
+        color: white;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 72px;
+        top: 50px; /* if you don't add this sidebar go disappear to the ending of the page*/
+      }
+
+      .closing-tag {
+        background-color: red;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .first {
+        background-color: lightblue;
+        height: 200px;
+        width: 200px;
+      }
+
+      .second {
+        background-color: lightpink;
+        height: 200px;
+        width: 200px;
+        position: relative; /* this is important when setting an absolute content.it tells the web page you 
+        want the content to be relative to this particular div */
+      }
+
+      .video-time {
+        background-color: black;
+        color: white;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">HEADER</div>
+    <div class="absolute">ABSOLUTE</div>
+    <div class="sidebar">
+      Sidebar
+      <div class="closing-tag">X</div>
+    </div>
+    <div class="first">Div 1</div>
+    <div class="second">
+      Div 2
+      <div class="video-time">5:00</div>
+    </div>
+  </body>
+</html>
